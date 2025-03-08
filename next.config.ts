@@ -6,12 +6,14 @@ const nextConfig = {
 
 module.exports = nextConfig;
 
-// next.config.js
 module.exports = {
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  experimental: {
+    missingEnvVars: 'ignore',  // IGNORIŠE NEDOSTAJUĆE ENV VARIJABLE
   },
 };

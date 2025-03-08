@@ -4,8 +4,7 @@ const nextConfig = {
   // Možeš dodati druge opcije ako su potrebne
 };
 
-module.exports = nextConfig;
-
+// next.config.js
 module.exports = {
   typescript: {
     ignoreBuildErrors: true,
@@ -14,6 +13,12 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    missingEnvVars: 'ignore',  // IGNORIŠE NEDOSTAJUĆE ENV VARIJABLE
+    missingEnvVars: 'ignore',
   },
+  output: 'standalone',
+  onDemandEntries: {
+    maxInactiveAge: 1000 * 60 * 60, // maksimalno dugo ignoriše rebuild greške
+  },
+  poweredByHeader: false,
+  generateEtags: false,
 };

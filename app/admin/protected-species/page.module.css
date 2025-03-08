@@ -1,0 +1,64 @@
+/* app/admin/protected-species/page.module.css */
+
+.speciesAdmin {
+    padding: 2rem;
+  }
+  
+  .addButton {
+    padding: 0.75rem 1.5rem;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .addButton:hover {
+    background: #2ecc71;
+  }
+  
+  .speciesTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .speciesTable th,
+  .speciesTable td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .speciesTable th {
+    background: #f7f7f7;
+  }
+  
+  .editButton,
+  .deleteButton {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+  
+  .editButton {
+    background: #2980b9;
+    color: #fff;
+  }
+  
+  .editButton:hover {
+    background: #3498db;
+  }
+  
+  .deleteButton {
+    background: #c0392b;
+    color: #fff;
+  }
+  
+  .deleteButton:hover {
+    background: #e74c3c;
+  }
+  

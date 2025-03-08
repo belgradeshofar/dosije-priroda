@@ -1,0 +1,42 @@
+/* components/ProtectedSpecies.module.css */
+.protectedSpecies {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    background: #f8f8f8;
+  }
+  
+  .image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .name {
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .fact {
+    margin: 0;
+  }
+  

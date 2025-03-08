@@ -1,0 +1,203 @@
+/* app/documentaries/[id]/page.module.css */
+
+.documentaryPage {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Video sekcija */
+  .videoSection {
+    position: relative;
+    width: 100%;
+    background: #000;
+  }
+  
+  .videoPlayer {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+  }
+  
+  .videoOverlay {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  .metaInfo span {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Opis sekcija */
+  .descriptionSection {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .synopsis {
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Interaktivni dugmići */
+  .interactiveButtons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .donateButton,
+  .watchLaterButton {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .donateButton {
+    background: #c0392b;
+  }
+  
+  .donateButton:hover {
+    background: #e74c3c;
+  }
+  
+  .watchLaterButton {
+    background: #2980b9;
+  }
+  
+  .watchLaterButton:hover {
+    background: #3498db;
+  }
+  
+  .shareSection {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .shareSection span {
+    font-weight: bold;
+  }
+  
+  .shareSection a {
+    text-decoration: none;
+    color: #2980b9;
+  }
+  
+  /* Rejting */
+  .ratingSection {
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  
+  .stars {
+    font-size: 2rem;
+  }
+  
+  .star {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .star:hover {
+    color: #f1c40f;
+  }
+  
+  /* Komentari */
+  .commentsSection {
+    padding: 2rem;
+    border-top: 1px solid #ccc;
+  }
+  
+  .commentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .commentForm textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .commentForm button {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .commentForm button:hover {
+    background: #3498db;
+  }
+  
+  .commentsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .commentItem {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Povezani filmovi */
+  .relatedSection {
+    padding: 2rem;
+  }
+  
+  .relatedGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .relatedCard {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .relatedCard:hover {
+    transform: scale(1.03);
+  }
+  
+  .relatedVideo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .relatedLink {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #2980b9;
+    background: #f7f7f7;
+    border-top: 1px solid #ddd;
+  }
+  

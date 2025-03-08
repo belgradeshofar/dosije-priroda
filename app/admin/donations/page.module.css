@@ -1,0 +1,30 @@
+/* app/admin/donations/page.module.css */
+
+.donationsAdmin {
+    padding: 2rem;
+  }
+  
+  .donationsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  .donationsTable th,
+  .donationsTable td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .donationsTable th {
+    background: #f7f7f7;
+  }
+  
+  .donationsChart {
+    text-align: center;
+    padding: 1rem;
+    background: #f0f0f0;
+    border-radius: 8px;
+  }
+  

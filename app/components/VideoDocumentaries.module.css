@@ -1,0 +1,39 @@
+.documentaries {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9; /* Lagano siva pozadina za sofisticiran izgled */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.videoContainer {
+  width: 350px; /* Veći, pregledniji */
+  height: 620px; /* 9:16 aspect ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.videoContainer:hover {
+  transform: scale(1.05);
+}

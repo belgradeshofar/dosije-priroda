@@ -1,0 +1,256 @@
+/* app/protected-species/page.module.css */
+
+.protectedSpeciesPage {
+    font-family: sans-serif;
+    color: #ffffff;
+  }
+  
+  /* 1. Hero sekcija */
+  .heroSection {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .heroBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .heroVideo,
+  .heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .heroContent {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 3rem;
+    animation: fadeInText 3s forwards;
+  }
+  
+  @keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .heroSubtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    animation: fadeInText 4s forwards;
+  }
+  
+  /* 2. Glavna sekcija – Enciklopedija */
+  .mainSection {
+    padding: 2rem;
+  }
+  
+  .speciesGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .speciesCard {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .speciesCard:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Media (slika ili video) unutar kartice */
+  .speciesMedia {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .speciesImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.3s ease;
+  }
+  
+  .speciesCard:hover .cardOverlay {
+    background: rgba(0,0,0,0.6);
+    opacity: 1;
+  }
+  
+  .dramaticQuote {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  /* Informacije o vrsti */
+  .speciesInfo {
+    padding: 1rem;
+  }
+  
+  .speciesName {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .latinName {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .status {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .story {
+    margin-bottom: 1rem;
+  }
+  
+  .detailsLink {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #27ae60;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .detailsLink:hover {
+    background: #2ecc71;
+  }
+  
+  /* 3. Interaktivne sekcije */
+  .interactiveSection {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+  }
+  
+  .helpSection,
+  .vrSection,
+  .natureSounds {
+    flex: 1 1 300px;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .helpButton,
+  .vrButton {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #2980b9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .helpButton:hover,
+  .vrButton:hover {
+    background: #3498db;
+  }
+  
+  .soundButton {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .soundButton:hover {
+    background: #d35400;
+  }
+  
+  /* 4. Poziv na akciju */
+  .ctaSection {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: #c0392b;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Responsivnost */
+  @media (max-width: 768px) {
+    .heroTitle {
+      font-size: 2rem;
+    }
+    .heroSubtitle {
+      font-size: 1.2rem;
+    }
+  }
+  

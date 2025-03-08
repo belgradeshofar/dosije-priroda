@@ -1,0 +1,55 @@
+/* app/admin/page.module.css */
+
+.adminPanel {
+    font-family: sans-serif;
+    min-height: 100vh; /* Omogućava da se stranica proteže */
+    background: #f9f9f9;
+    padding-bottom: 2rem; /* Dodatni razmak na dnu */
+  }
+  
+  .header {
+    background: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav li a:hover {
+    color: #3498db;
+  }
+  
+  .main {
+    padding: 2rem;
+    background: #fff;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .dashboardIntro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  

@@ -1,0 +1,236 @@
+/* app/support/page.module.css */
+
+.supportPage {
+    font-family: sans-serif;
+    color: #333;
+  }
+  
+  /* 1. Hero sekcija */
+  .heroSection {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .heroVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .heroContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    padding: 0 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 3rem;
+    animation: fadeIn 3s ease;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    animation: fadeIn 4s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .supportNowButton {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .supportNowButton:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* 2. Opcije podrške */
+  .optionsSection {
+    padding: 2rem;
+    text-align: center;
+    background: #f7f7f7;
+  }
+  
+  .optionsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .optionCard {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .optionCard:hover {
+    transform: scale(1.02);
+  }
+  
+  .optionButton {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .optionButton:hover {
+    background: #2ecc71;
+  }
+  
+  /* 3. Transparentnost */
+  .transparencySection {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .fundsDiagram img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .fundsInfo {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .reportsButton {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #2980b9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .reportsButton:hover {
+    background: #3498db;
+  }
+  
+  /* 4. Priče i obećanje */
+  .storiesSection {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .testimonialCard {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .pledgeSection {
+    margin-top: 2rem;
+  }
+  
+  .pledgeSection input {
+    width: 80%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 1rem;
+  }
+  
+  .pledgeButton {
+    padding: 0.75rem 1.5rem;
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .pledgeButton:hover {
+    background: #3498db;
+  }
+  
+  .thankYouMessage {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #27ae60;
+  }
+  
+  /* 5. CTA sekcija */
+  .ctaSection {
+    padding: 2rem;
+    text-align: center;
+    background: #e74c3c;
+    color: #fff;
+  }
+  
+  .ctaOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .ctaButton {
+    padding: 1rem 2rem;
+    background: #c0392b;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .ctaButton:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .heroTitle {
+      font-size: 2rem;
+    }
+    .heroSubtitle {
+      font-size: 1.2rem;
+    }
+  }
+  

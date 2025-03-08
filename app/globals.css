@@ -22,3 +22,9 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Dodaj ovo u globalni CSS fajl, npr. styles/globals.css */
+#__next-build-watcher,
+#__next-build-error-overlay {
+  display: none !important;
+}

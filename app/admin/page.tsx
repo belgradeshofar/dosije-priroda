@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import LogoutButton from "./components/LogoutButton"; // Uveri se da postoji ova komponenta
+import LogoutButton from "./components/LogoutButton";
 import styles from "./page.module.css";
 
 export default function AdminPanel() {
@@ -11,10 +11,8 @@ export default function AdminPanel() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    // Provera da li postoji token
     const token = localStorage.getItem("adminToken");
     if (!token) {
-      // Ako nema tokena, preusmeri na login stranicu
       router.push("/admin/login");
     } else {
       setIsLoggedIn(true);
@@ -22,7 +20,6 @@ export default function AdminPanel() {
   }, [router]);
 
   if (!isLoggedIn) {
-    // Možeš prikazati indikator učitavanja
     return <p>Učitavanje...</p>;
   }
 

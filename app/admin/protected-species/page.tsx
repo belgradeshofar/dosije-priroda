@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = 'force-dynamic';
 
 import { useEffect, useState } from "react";
 import { supabase } from "../../../lib/supabaseClient";
@@ -28,7 +29,6 @@ export default function ProtectedSpeciesAdmin() {
   });
   const [isEditing, setIsEditing] = useState(false);
 
-  // Učitavanje vrsta iz Supabase
   useEffect(() => {
     async function fetchSpecies() {
       const { data, error } = await supabase
@@ -56,7 +56,6 @@ export default function ProtectedSpeciesAdmin() {
 
   async function handleFormSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log("Form data:", formData);
 
     if (isEditing && formData.id) {
       const { data, error } = await supabase

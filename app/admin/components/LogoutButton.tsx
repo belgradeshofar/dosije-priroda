@@ -6,9 +6,7 @@ export default function LogoutButton() {
   const router = useRouter();
 
   const handleLogout = () => {
-    // Briši token iz localStorage-a
     localStorage.removeItem("adminToken");
-    // Preusmeri na login stranicu
     router.push("/admin/login");
   };
 

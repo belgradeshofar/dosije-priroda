@@ -13,7 +13,6 @@ type Documentary = {
 const dummyDocs: Documentary[] = [
   { id: 1, title: "Dokumentarac 1", duration: "1h 30min", status: "Objavljeno" },
   { id: 2, title: "Dokumentarac 2", duration: "1h 45min", status: "Skica" },
-  // Dodaj više dummy podataka
 ];
 
 export default function DocumentariesAdmin() {
@@ -39,7 +38,7 @@ export default function DocumentariesAdmin() {
               <td>{doc.title}</td>
               <td>{doc.duration}</td>
               <td>{doc.status}</td>
-              <td>{/* Dodaj statičke podatke o pregledima */}</td>
+              <td>{/* Staticki podaci o pregledima */}</td>
               <td>
                 <button className={styles.editButton}>Uredi</button>
                 <button className={styles.deleteButton}>Obriši</button>

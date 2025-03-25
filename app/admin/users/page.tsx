@@ -13,7 +13,6 @@ type User = {
 const dummyUsers: User[] = [
   { id: 1, name: "Admin Korisnik", email: "admin@example.com", role: "admin" },
   { id: 2, name: "Urednik Korisnik", email: "urednik@example.com", role: "urednik" },
-  // Dodaj više korisnika
 ];
 
 export default function UsersAdmin() {

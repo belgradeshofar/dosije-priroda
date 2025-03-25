@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = 'force-dynamic';
+
 import { useEffect, useState } from "react";
 import { supabase } from "../../../lib/supabaseClient";
 import styles from "./page.module.css";
@@ -13,7 +15,7 @@ type NewsArticle = {
   title: string;
   intro: string;
   image: string;
-  content: string; // HTML sadržaj
+  content: string;
   date: string;
   status: "Objavljeno" | "Skica";
 };
@@ -30,7 +32,6 @@ export default function NewsAdmin() {
   });
   const [isEditing, setIsEditing] = useState(false);
 
-  // Inicijalizuj Tiptap editor s ekstenzijama
   const editor = useEditor({
     extensions: [StarterKit, ImageExtension, Underline],
     content: formData.content || "",
@@ -45,7 +46,6 @@ export default function NewsAdmin() {
     }
   }, [formData.content, editor]);
 
-  // Učitavanje vesti iz Supabase
   useEffect(() => {
     async function fetchNews() {
       const { data, error } = await supabase
@@ -62,7 +62,6 @@ export default function NewsAdmin() {
     fetchNews();
   }, []);
 
-  // Brisanje vesti
   async function handleDelete(id: number) {
     const { error } = await supabase.from("news").delete().eq("id", id);
     if (error) {
@@ -72,10 +71,8 @@ export default function NewsAdmin() {
     }
   }
 
-  // Slanje forme – uređivanje ili dodavanje nove vesti
   async function handleFormSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log("Form data:", formData);
 
     if (isEditing && formData.id) {
       const { data, error } = await supabase
@@ -232,7 +229,6 @@ export default function NewsAdmin() {
                 }
                 required
               />
-              {/* Tiptap Toolbar */}
               <div className={styles.toolbar}>
                 <button
                   type="button"
@@ -276,7 +272,9 @@ export default function NewsAdmin() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => editor?.chain().focus().toggleBlockquote().run()}
+                  onClick={() =>
+                    editor?.chain().focus().toggleBlockquote().run()
+                  }
                 >
                   Quote
                 </button>
@@ -292,7 +290,6 @@ export default function NewsAdmin() {
                   Insert Image (u članak)
                 </button>
               </div>
-              {/* Tiptap Editor */}
               <div className={styles.editorWrapper}>
                 {editor ? (
                   <EditorContent editor={editor} />

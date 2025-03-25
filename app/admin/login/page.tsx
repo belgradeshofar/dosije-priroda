@@ -21,7 +21,6 @@ export default function AdminLogin() {
     if (error) {
       setErrorMsg(error.message);
     } else {
-      // Ako je login uspešan, preusmeri na dashboard
       router.push("/admin/dashboard");
     }
   };

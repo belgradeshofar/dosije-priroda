@@ -13,7 +13,6 @@ type Donation = {
 const dummyDonations: Donation[] = [
   { id: 1, donorName: "Anonimno", amount: 50, status: "uspešno" },
   { id: 2, donorName: "Marko", amount: 100, status: "uspešno" },
-  // Dodaj više dummy podataka
 ];
 
 export default function DonationsAdmin() {
@@ -41,7 +40,6 @@ export default function DonationsAdmin() {
         </tbody>
       </table>
       <div className={styles.donationsChart}>
-        {/* Placeholder za grafikon sa mesečnim donacijama */}
         <p>Grafikon mesečnih donacija (placeholder)</p>
       </div>
     </div>
